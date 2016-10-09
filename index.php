@@ -11,3 +11,4 @@ set_include_path(get_include_path()
 	$obj = RouteController::instasnce();
 	$obj->route();
 ?>
+

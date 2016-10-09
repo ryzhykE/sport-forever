@@ -1189,7 +1189,7 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1;
   color: #777777;
 }
@@ -1257,7 +1257,7 @@ h4,
 }
 h5,
 .h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 h6,
 .h6 {
@@ -13474,6 +13474,13 @@ footer.e404 {
   transition: all 0.2s ease-in-out;
   width: 80px;
 }
+.features-item img {
+  height: 220px;
+  width: 250px;
+  padding-bottom: 10px;
+}
+
+
 /**
  *
  *
@@ -14637,4 +14644,13 @@ footer.e404 {
     border-color: #e1e1e1 transparent;
     top: -10px;
   }
+}
+
+
+.date_pub{
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius:5px;
+  width: 130px;
+  text-align: center;
 }

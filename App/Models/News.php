@@ -18,5 +18,4 @@ class News extends Model
     public $img;
     public $date_publish;
 
-
 }

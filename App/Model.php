@@ -20,7 +20,7 @@ abstract class Model
     {
         $db = DB::instasnce();
         return $db->query(
-            'SELECT * FROM ' . static::TABLE,
+            'SELECT * FROM  ' . static::TABLE,
             static::class
         );
     }

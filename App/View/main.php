@@ -4,17 +4,17 @@
 				<ul>
 					<li data-transition="slotslide-horizontal" data-slotamount="1" data-title="Nerd Wisdom"><img src="App\View\img/slider/slide01.jpg" alt="//">
 						<div data-x="right" data-y="0" data-speed="1000" data-start="1000" data-easing="easeOutBack" class="caption lfr">
-							<p>Workout Routine for Beginners</p><a href="#">Pick up a Class<i class="fa fa-arrow-right"></i></a>
+							<p>Найди время, а не оправдание</p><a href="#">Выбери свое направление<i class="fa fa-arrow-right"></i></a>
 						</div>
 					</li>
 					<li data-transition="slotslide-horizontal" data-slotamount="1" data-title="Nerd Wisdom"><img src="App\View\img/slider/slide02.jpg" alt="//">
 						<div data-x="right" data-y="0" data-speed="1000" data-start="1000" data-easing="easeOutBack" data-title="Nerd Wisdom" class="caption lfr">
-							<p>Workout Routine for Beginners</p><a href="#">Pick up a Class<i class="fa fa-arrow-right"></i></a>
+							<p>Найди время, а не оправдание</p><a href="#">Выбери свое направление<i class="fa fa-arrow-right"></i></a>
 						</div>
 					</li>
 					<li data-transition="slotslide-horizontal" data-slotamount="1" data-title="Nerd Wisdom"><img src="App\View\img/slider/slide03.jpg" alt="//">
 						<div data-x="right" data-y="0" data-speed="1000" data-start="1000" data-easing="easeOutBack" data-title="Nerd Wisdom" class="caption lfr">
-							<p>Workout Routine for Beginners</p><a href="#">Pick up a Class<i class="fa fa-arrow-right"></i></a>
+							<p>Найди время, а не оправдание</p><a href="#">Выбери свое направление<i class="fa fa-arrow-right"></i></a>
 						</div>
 					</li>
 				</ul>
@@ -27,24 +27,19 @@
 			<article>
 				<div class="container">
 					<div class="row">
-						<div data-animation="tada" data-animation-delay="400" class="col-sm-6 col-md-4 animated">
-							<div class="features-item"><i class="fa fa-certificate"></i>
-								<h5>Monthly Competetions</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus deleniti praesentium, modi. Laudantium consequatur placeat ut cupiditate id.</p><a href="#" class="read">Read more</a>
-							</div>
-						</div>
-						<div data-animation="tada" data-animation-delay="600" class="col-sm-6 col-md-4 animated">
-							<div class="features-item"><i class="fa fa-gift"></i>
-								<h5>Fun and work out</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus deleniti praesentium, modi. Laudantium consequatur placeat ut cupiditate id.</p><a href="#" class="read">Read more</a>
-							</div>
-						</div>
-						<div data-animation="tada" data-animation-delay="800" class="col-sm-12 col-md-4 animated">
-							<div class="features-item"><i class="fa fa-shield"></i>
-								<h5>Crossfit Team</h5>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus deleniti praesentium, modi. Laudantium consequatur placeat ut cupiditate id.</p><a href="#" class="read">Read more</a>
-							</div>
-						</div>
+						<? if($news):?>
+							<?foreach($news as $article):?>
+								<div data-animation="tada" data-animation-delay="400" class="col-sm-6 col-md-4 animated">
+									<div class="features-item">
+										<h5><?= $article->title;?></h5></span>
+										<img src="App\View\img\news\<?= $article->img;?>"
+										<p><?= $article->short_descr;?></p>
+										<p class="date_pub">Дата публикации: <?= $article->date_publish;?></p>
+										<a href="article/id/<?= $article->id;?>" class="read">Подробнее</a>
+									</div>
+								</div>
+							<? endforeach;?>
+						<? endif;?>
 					</div>
 				</div>
 			</article>

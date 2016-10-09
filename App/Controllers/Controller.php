@@ -119,6 +119,4 @@ abstract class Controller
 		$str = "Fault: ".$time." - ".$err."\n\r";
 		file_put_contents("log.txt",$str,FILE_APPEND);
 	}
-
-	
 }

@@ -8,10 +8,7 @@
 
 namespace App\Controllers;
 
-
-use App\Model;
 use App\Models\News;
-use App\DB;
 
 abstract class MainController extends Controller
 {
@@ -28,16 +25,19 @@ abstract class MainController extends Controller
 
     protected $footer;
 
+    protected $news;
+
     protected function input()
     {
         $this->title = "Sport Zal / ";
-        $this->obmod = News::findAll();
-        var_dump($this->obmod);
+        $this->news = News::findAll();
+
     }
 
     protected function output()
     {
         $this->header = $this->render('App\View\header');
+        $this->content = $this->render('App\View\main', ['news' => $this->news]);
         $this->footer = $this->render('App\View\footer');
 
         $page = $this->render('App\View\index',['header'=>$this->header,'content'=>$this->content,'footer'=>$this->footer]);
